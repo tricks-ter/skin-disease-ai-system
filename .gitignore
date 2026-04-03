@@ -1,0 +1,79 @@
+# ============================================
+# Git Ignore for Fedora Linux Environment
+# ============================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.env
+
+# Fedora/RPM specific
+*.rpm
+*.srpm
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data (Don't commit large files)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Models (Large files)
+models/weights/*.pt
+models/weights/*.pth
+models/weights/*.onnx
+models/weights/*.bin
+!models/weights/class_map.json
+models/checkpoints/*
+!models/checkpoints/.gitkeep
+
+# Logs
+logs/
+*.log
+!logs/.gitkeep
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+notebooks/*.png
+notebooks/*.jpg
+
+# OS (Fedora/Linux)
+.DS_Store
+Thumbs.db
+*.desktop
+.directory
+
+# Environment
+.env
+.env.local
+*.env
+.env.fedora
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Credentials
+*.pem
+*.key
+kaggle.json
